@@ -5,5 +5,7 @@ var comments = [
   {"name":"Olaf","comment":"Some people are worth melting for.","timestamp":172281600000},
   {"name":"Snow White","comment":"You're never too old to be young","timestamp":882489600000},
   {"name":"Wreck-It Ralph","comment":"There's no one I'd rather be than me.","timestamp":678326400000},
-  {"name":"Mickey Mouse","comment":"To laugh at yourself is to love yourself.","timestamp":1215993600000"}
-];
+  {"name":"Mickey Mouse","comment":"To laugh at yourself is to love yourself.","timestamp":1215993600000}
+  ];
+
+  export defalut {comments};

@@ -2,10 +2,83 @@
 <html>
   <head>
   <title>Coding-Test</title>
-    <link rel="stylesheet" href="build/app.css" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--link rel="stylesheet" href="build/app.css" /-->
+    <link rel="stylesheet" href="src/stylesheets/main.css" />
   </head>
   <body>
-    <h1>What's up?</h1>
-    <script src="build/app.js"></script>
+  	<header>
+  		<div>Apply Now</div>
+  	</header>
+  	<nav>
+  		<ul>
+    		<li><a href="#">Home</a></li>
+    		<li><a href="#">Live Happy</a></li>
+    		<li><a href="#">Live Healthy</a></li>
+    	</ul>
+  	</nav>
+    <!--script src="build/app.js"></script-->
+    <div class="carousel">
+    	<ul>
+    		<li></li>
+    		<li></li>
+    	</ul>
+    </div>
+
+    <div class="main">
+    	<div class="content-container">
+    		<p class="content-header">
+	    		Welcome to Development<br/><span class="content-light-border-bottom">Please be thorough when coding...<span>
+	    	</p>
+	    	<p class="content">
+	    		Building websites is a great time to reflect on the cool things we can do with code. We get to add alt tags, code links and get to stand by the latest in HTML or pre-processors like sass or less. If you like webpack you'll love the project we have set up for you. Good luck and have some fun!
+	    	</p>
+
+	    	<div class="link-container">
+	    		<ul>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    	</ul>
+		    	<ul>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    		<li><a href="#">Some Link</a></li>
+		    	</ul>
+	    	</div>
+    	</div>
+    	
+	    <div class="comments-container">
+	    	<h3 id="comment-header">Comments</h3>
+	    	<ul id="comments">
+
+	    	</ul>
+	    	<div id="previous-button">
+		    	PREVIOUS
+		    </div>
+		    <div id="next-button">
+		    	NEXT
+		    </div>
+		    <div id="selected-commenters-info">
+		    </div>
+	    </div>
+	</div>
+    <div class="free-advise">
+    	<p>Let's put an end to world hunger today</p>
+    	<button>Free Advise</button>
+    </div>
+    <div class="box-model">
+    	<p>Changing the world one pixel at a time.</p>
+    	<button>Box Model</button>
+    </div>
+    <div class="footer">
+    	<p>COPYRIGHT © 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+    </div>
+    <script src="src/js/main.js" type="module"></script>
   </body>
 </html>
