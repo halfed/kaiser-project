@@ -6,6 +6,18 @@ html, body {
 	color: #fff;
 }
 
+.carousel ul > li {
+	display: none;
+
+	img {
+		width: 100%;
+	}
+}
+
+.active {
+	display: block;
+}
+
 .comments-container {
 	background-color: #8AB679;
 	color: #FFFFFF;
@@ -20,6 +32,25 @@ html, body {
 .main {
 	display: flex;
 	color: #000000;
+	font-weight: bold;
+	padding: 0 9%;
+
+	.content-header {
+		font-size: 2rem;
+
+		.content-light-border-bottom {
+			font-size: 1.4rem;
+			font-weight: normal;
+			color: #E5E5E5;
+			border-bottom: 2px dotted #E5E5E5;
+			padding: 0 32px 0 0;
+		}
+	}
+
+	.content {
+		font-size: 1.4rem;
+		font-weight: normal;
+	}
 
 	.link-container {
 		display: flex;
@@ -42,7 +73,7 @@ html, body {
 
 .free-advise {
 	background-color: #F58E5B;
-	padding: 0px 30px;
+	padding: 0px 9%;
 
 	p {
 		color: #FFFFFF;
