@@ -7,7 +7,7 @@ html, body {
 }
 
 .carousel ul > li {
-	display: none;
+	//display: none;
 
 	img {
 		width: 100%;
@@ -18,9 +18,68 @@ html, body {
 	display: block;
 }
 
+header {
+	height: 40px;
+}
+
+nav {
+	height: 39px;
+	margin: 27px 0 24px 0;
+}
+
+@media only screen and (max-width: 1023px) {
+	nav {
+		display: none;
+	}
+}
+
+.main-nav {
+	display: flex;
+	float: right;
+	li {
+		background-color: #1F272A;
+		width: 228px;
+		height: 39px;
+		align-items: center;
+	    display: flex;
+	    margin-left: 2px;
+	    justify-content: center;
+
+		a {
+			color: #FFFFFF;
+			font-size: 1.4rem;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	} 
+}
+
 .comments-container {
-	background-color: #8AB679;
+	
 	color: #FFFFFF;
+	width: 50%;
+	font-size: 2.4rem;
+	margin-left: 17px;
+
+	.comments-box {
+		background-color: #8AB679;
+		height: 178px;
+		list-style-type: none;
+		margin: 56px 0 0px 0;
+		li {
+			font-size: 2.4rem;
+		}
+	}
+
+	.carousel-buttons {
+		color: #000000;
+		float: left;
+	}
+
+	.selected-commenters-info {
+		color: #000000;
+		float: right;
+	}
 }
 
 @media only screen and (max-width: 1023px) {
@@ -29,20 +88,50 @@ html, body {
 	}
 }
 
+.apply-button {
+	background-color: #8AB679;
+	width: 15%;
+    height: 40px;
+	border: none;
+	float: right;
+	color: #FFFFFF;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 1023px) {
+	.apply-button {
+		width: 43%;
+    	height: 55px;
+	}
+}
+
 .main {
 	display: flex;
 	color: #000000;
 	font-weight: bold;
 	padding: 0 9%;
+	margin: 0 0 100px 0;
+
+	.content-container {
+		width: 50%;
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.content-container {
+			width: 100%;
+		}
+	}
 
 	.content-header {
 		font-size: 2rem;
-
+		border-bottom: 1px dotted #E5E5E5;
+		
 		.content-light-border-bottom {
 			font-size: 1.4rem;
 			font-weight: normal;
 			color: #E5E5E5;
-			border-bottom: 2px dotted #E5E5E5;
+			
 			padding: 0 32px 0 0;
 		}
 	}
@@ -60,20 +149,25 @@ html, body {
 			list-style-type: none;
 
 			li > a {
-			    font-size: 1.6rem;
+			    font-size: 2rem;
 			    color: black;
 			    font-weight: bold;
 			    text-decoration: none;
+
+			    @media only screen and (max-width: 1023px) {
+			    	font-size: 1.6rem;
+			    }
 			}
 		}	
 	}
+
+
 }
-
-
 
 .free-advise {
 	background-color: #F58E5B;
 	padding: 0px 9%;
+	height: 104px;
 
 	p {
 		color: #FFFFFF;
@@ -82,6 +176,7 @@ html, body {
 		text-align: center;
 		padding: 24px 0;
     	margin: 0;
+    	float: left;
 	}
 
 	button {
@@ -90,9 +185,25 @@ html, body {
 		color: #FFFFFF;
 		border: 2px solid #FFFFFF;
 		border-radius: 3px;
-    	width: 100%;
+    	width: 17%;
     	padding: 10px 0;
-    	margin: 0 0 40px 0;
+    	margin: 24px 0 24px 0;
+    	float: right;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.free-advise {
+		height: auto;
+		p {
+			float: none;
+			text-align: left;
+		}
+		button {
+	    	width: 100%;
+	    	float: none;
+	    	margin: 0 0 40px 0;
+		}
 	}
 }
 
@@ -105,7 +216,7 @@ html, body {
 		font-size: 3.2rem;
 		font-weight: bold;
 		text-align: center;
-		padding: 24px 0;
+		padding: 212px 0 24px 0;
     	margin: 0;
 	}
 
@@ -115,22 +226,68 @@ html, body {
 		color: #FFFFFF;
 		border: 2px solid #FFFFFF;
 		border-radius: 3px;
-    	width: 100%;
+    	width: 17%;
     	padding: 10px 0;
-    	margin: 0 0 40px 0;
+    	margin: 0 0 205px 0;
+    	left: 585px;
+    	position: relative;
 	}
 	
+}
+
+@media only screen and (max-width: 1023px) {
+	.box-model {
+		height: auto;
+		p {
+			padding: 24px 0;
+		}
+		button {
+	    	width: 100%;
+	    	float: none;
+	    	margin: 0 0 40px 0;
+	    	left: 0;
+		}
+	}
 }
 
 .footer {
 	background-color: #222222;
 	color: #FFFFFF;
-	font-size: 1.4rem;
-	text-align: center;
+	
+	
 	border-top: 3px solid #8A8A8A;
 
 	p {
-		margin: 0;
-		padding: 24px 0;
+		display: none;
+	}
+
+	
+
+	.footer-links {
+		text-align: right;
+		padding: 40px 0 40px 0;
+		margin: 0 40px 0 0;
+		a {
+			color: #FFFFFF;
+			text-decoration: none;
+			font-weight: bold;
+			margin: 0 0 0 64px;
+			font-size: 2rem;
+		}
+	}
+
+	@media only screen and (max-width: 1023px) {
+		p {
+			margin: 0;
+			padding: 24px 0;
+			text-align: center;
+			padding: 40px 0 40px 0;
+			font-size: 1.4rem;
+			display: block;
+		}
+
+		.footer-links {
+			display: none;
+		}
 	}
 }

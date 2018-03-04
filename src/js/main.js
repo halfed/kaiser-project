@@ -11,12 +11,13 @@
 	];
 
 	function convertTimeStamp(timestamp){
-	  var a = new Date(timestamp);
-	  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-	  var year = a.getFullYear();
-	  var month = a.getMonth();
-	  var date = a.getDate();
-	  var time = month + '/' + date + '/' + year ;
+	  let a = new Date(timestamp);
+	  let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	  let year = a.getFullYear();
+	  let month = a.getMonth();
+	  let date = a.getDate();
+	  let
+	   time = month + '/' + date + '/' + year ;
 	  return time;
 	}
 
@@ -24,7 +25,7 @@
 		return b.timestamp - a.timestamp;
 	}); 
 
-	const commentSection = document.getElementById('comments');
+	const commentSection = document.getElementById('comments-box');
 	const commentersInfo = document.getElementById('selected-commenters-info');
 
 	commentersInfo.innerHTML = sortedComments[0].name;
@@ -39,7 +40,7 @@
 			);*/
 	});
 
-	commentersInfo.innerHTML = sortedComments[0].name + " " + sortedComments[0].timestamp;
+	commentersInfo.innerHTML = sortedComments[0].name + ", " + sortedComments[0].timestamp;
 
 
 
