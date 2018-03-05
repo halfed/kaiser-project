@@ -2,20 +2,70 @@ html, body {
 	font-family: sans-serif;
 	font-size: 62.5%;
 	height: 100%;
-	margin: 0;
+	margin: 0 auto;
 	color: #fff;
+	max-width: 1440px;
+}
+.mobile-menu {
+	display: none;
 }
 
-.carousel ul > li {
-	//display: none;
+@media only screen and (max-width: 1023px) {
+	.mobile-menu {
+		color: #8A8A8A;
+	    font-size: 2.7rem;
+	    position: relative;
+	    margin: 14px 20px 30px 20px;
+	    float: left;
+	    display: block;
+	    cursor: pointer;
+	}
+}
 
-	img {
-		width: 100%;
+button {
+	cursor: pointer;
+}
+
+.carousel ul {
+	padding: 0;
+	li {
+		//display: none;
+		position: relative;
+    	text-align: center;
+    	@media only screen and (max-width: 1023px) {
+	    	height: 298px;
+	    	width: auto;
+	   	}
+
+		img {
+			width: 100%;
+			@media only screen and (max-width: 1023px) {
+	    	height: 298px;
+	    	}
+		}
+	}
+} 
+
+@media only screen and (max-width: 1023px) {
+	.carousel {
+		margin-bottom: 40px;
 	}
 }
 
 .active {
 	display: block;
+}
+
+.next-button {
+    float: left;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.previous-button {
+	float: left;
+    padding-right: 30px;	
+    cursor: pointer;
 }
 
 header {
@@ -50,8 +100,49 @@ nav {
 			font-size: 1.4rem;
 			font-weight: bold;
 			text-decoration: none;
+			cursor: pointer;
 		}
 	} 
+}
+
+.image-description {
+	position: absolute;
+    top: 33%;
+    left: 8%;
+    text-align: left;
+
+    @media only screen and (max-width: 1023px) {
+		width: 80%;
+	}
+
+	.description-header {
+	    font-size: 3.6rem;
+	    color: #FFFFFF;
+	    padding: 0;
+	    margin: 0;
+	    @media only screen and (max-width: 1023px) {
+	    	font-size: 2.4rem;
+	    }
+	}
+	.description-content {
+		font-size: 1.6rem;
+    	color: #FFFFFF;
+    	margin: 5px 0 18px 0;
+	}
+
+	button {
+		background-color: #F58E5B;
+	    font-size: 2.4rem;
+	    color: #FFFFFF;
+	    border: none;
+	    padding: 15px 35px 15px 35px;
+	    border-radius: 2px;
+	    @media only screen and (max-width: 1023px) {
+	    	font-size: 1.6rem;
+	    	padding: 7px 20px 7px 20px;
+	    	margin: 20px 0 0 53px;
+	    }
+	}
 }
 
 .comments-container {
@@ -68,17 +159,21 @@ nav {
 		margin: 56px 0 0px 0;
 		li {
 			font-size: 2.4rem;
+			padding-top: 40px;
+			display: none;
 		}
 	}
 
 	.carousel-buttons {
 		color: #000000;
 		float: left;
+    	font-size: 4rem;
 	}
 
 	.selected-commenters-info {
 		color: #000000;
 		float: right;
+		margin-top: 10px;
 	}
 }
 
@@ -113,6 +208,10 @@ nav {
 	padding: 0 9%;
 	margin: 0 0 100px 0;
 
+	@media only screen and (max-width: 1023px) {
+		margin: 0 0 43px 0;
+	}
+
 	.content-container {
 		width: 50%;
 	}
@@ -126,7 +225,7 @@ nav {
 	.content-header {
 		font-size: 2rem;
 		border-bottom: 1px dotted #E5E5E5;
-		
+
 		.content-light-border-bottom {
 			font-size: 1.4rem;
 			font-weight: normal;
@@ -143,26 +242,32 @@ nav {
 
 	.link-container {
 		display: flex;
+		justify-content: space-around;
 
 		ul {
 
 			list-style-type: none;
+			padding: 0;
 
-			li > a {
-			    font-size: 2rem;
-			    color: black;
-			    font-weight: bold;
-			    text-decoration: none;
+			li {
+				font-size: 1.2rem;
+				a {
+				    font-size: 2rem;
+				    color: black;
+				    font-weight: bold;
+				    text-decoration: none;
+				    padding-left: 10px;
 
-			    @media only screen and (max-width: 1023px) {
-			    	font-size: 1.6rem;
-			    }
+				    @media only screen and (max-width: 1023px) {
+				    	font-size: 1.6rem;
+				    }
+				}
 			}
-		}	
+		}
 	}
-
-
 }
+
+
 
 .free-advise {
 	background-color: #F58E5B;
@@ -273,6 +378,7 @@ nav {
 			font-weight: bold;
 			margin: 0 0 0 64px;
 			font-size: 2rem;
+			cursor: pointer;
 		}
 	}
 

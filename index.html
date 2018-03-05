@@ -4,13 +4,14 @@
   <title>Coding-Test</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!--link rel="stylesheet" href="build/app.css" /-->
+    <!--link rel="stylesheet" href="build/app.css" / -->
     <link rel="stylesheet" href="src/stylesheets/main.css" />
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
 
 	  	<header>
+            <div id="mobile-menu" class="mobile-menu"><i class="fas fa-bars"></i></div>
 	  		<button class="apply-button">Apply Now</button>
 	  	</header>
 
@@ -26,15 +27,22 @@
     <!--script src="build/app.js"></script-->
     <div class="carousel">
     	<ul>
-    		<li><img src="src/assets/images/cat.jpg" class="active"><p>Waiting for the right moment?</p><p>Sometimes the right time to start is now.</p><button>Special Delivery</button></li>
     		<li>
+                <img src="src/assets/images/cat.jpg" class="active">
+                <div class="image-description">
+                    <p class="description-header">Waiting for the right moment?</p>
+                    <p class="description-content">Sometimes the right time to start is now.</p>
+                    <button>Special Delivery</button>
+                </div>
+            </li>
+    		<!--li>
     			<img src="src/assets/images/ducks.jpg">
     			<div class="image-description">
-    				<p>Building Better Leaders</p>
-    				<p>Without ducking out of the holiday party too quick.</p>
+    				<p class="description-header">Building Better Leaders</p>
+    				<p class="description-content">Without ducking out of the holiday party too quick.</p>
     				<button>Free Advise</button>
     			</div>
-    		</li>
+    		</li-->
     	</ul>
     </div>
 
@@ -49,18 +57,18 @@
 
 	    	<div class="link-container">
 	    		<ul>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
 		    	</ul>
 		    	<ul>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
 		    	</ul>
 	    	</div>
     	</div>
@@ -70,11 +78,11 @@
 
 	    	</ul>
 	    	<div class="carousel-buttons">
-		    	<div id="previous-button">
-			    	PREVIOUS
+		    	<div id="previous-button" class="previous-button">
+			    	<i class="fas fa-angle-left"></i>
 			    </div>
-			    <div id="next-button">
-			    	NEXT
+			    <div id="next-button" class="next-button">
+			    	<i class="fas fa-angle-right"></i>
 			    </div>
 		    </div>
 		    <div id="selected-commenters-info" class="selected-commenters-info">
@@ -90,7 +98,7 @@
     	<button>Box Model</button>
     </div>
     <div class="footer">
-    	<p>COPYRIGHT © 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+    	<p>COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
     	<div class="footer-links">
     		<a href="#">Link1</a>
     		<a href="#">Link2</a>
@@ -101,3 +109,4 @@
     <script src="src/js/main.js" type="module"></script>
   </body>
 </html>
+
