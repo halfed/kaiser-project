@@ -30,7 +30,7 @@
 
 	commentersInfo.innerHTML = sortedComments[0].name;
 
-	let allComments = sortedComments.map(function(result) {
+	/*let allComments = sortedComments.map(function(result) {
 		let indCommentContainer = document.createElement("li");
 		indCommentContainer.innerHTML = result.comment;
 		commentSection.appendChild(indCommentContainer);
@@ -38,11 +38,42 @@
 		/*return (
 				indCommentContainer
 			);*/
-	});
+	//});
+
+	console.log("all comments: " + Object.keys(sortedComments)[0]);
+
+	
+
+	for(var key in sortedComments){
+	  console.log("key: " + key + ' - ' + sortedComments[key].comment);
+	  let indCommentContainer = document.createElement("li");
+	  indCommentContainer.innerHTML = sortedComments[key].comment;
+	  
+	  if(key === '0') {
+	  	indCommentContainer.className = 'active';
+	  	console.log("first key: " + key + ' - ' + sortedComments[key].comment);
+	  	console.log(typeof(key));
+	  	console.log("value: " + key.comment);
+	  }
+	  commentSection.appendChild(indCommentContainer);
+	  sortedComments[key].timestamp = convertTimeStamp(sortedComments[key].timestamp);
+	}
 
 	commentersInfo.innerHTML = sortedComments[0].name + ", " + sortedComments[0].timestamp;
 
+	let toggleList = () => {
+		alert("it works");
+	}
 
+	let bindEvent = element => {
+		let prevElement = document.getElementById(element);
+		prevElement.addEventListener("click", toggleList, false);
+	}
+
+	bindEvent('previous-button');
+	bindEvent('next-button');
+	//bindEvent('');
+	//bindEvent('');
 
 })();
 
@@ -51,7 +82,16 @@
 use css animations
 use class active on first li
 use javascript to toggle between li and set active to next li
+bind elements to events
+build list of comments
+toggle between lists
+get array of all lis 
+on click remove existing class and append it to next li and add inline style of display
+css to transistion 
+display commenter's info when their comment displays
 
-Friday 3/2 12:30 - 7p
 Thrus 2/28 2p -7p
+Friday 3/2 12:30 - 7p
+Saturday 3/3 4p - 8:30p
+
 */
