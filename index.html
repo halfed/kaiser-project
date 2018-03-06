@@ -4,26 +4,62 @@
   <title>Coding-Test</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!--link rel="stylesheet" href="build/app.css" /-->
+    <!--link rel="stylesheet" href="build/app.css" / -->
     <link rel="stylesheet" href="src/stylesheets/main.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
-  	<header>
-  		<div>Apply Now</div>
-  	</header>
-  	<nav>
-  		<ul>
-    		<li><a href="#">Home</a></li>
-    		<li><a href="#">Live Happy</a></li>
-    		<li><a href="#">Live Healthy</a></li>
-    	</ul>
-  	</nav>
+    <div class="wrapper">
+        <nav class="mobile-nav">
+            <ul class="list-unstyled components">
+                <li><i class="mobile-icon fas fa-home"></i> <a href="#">Home</a></li>
+                <li><i class="mobile-icon fas fa-globe"></i> <a href="#">Live Happy</a></li>
+
+                <li><i class="mobile-icon fas fa-heart"></i> <a href="#">Live Healthy</a></li>
+                <li><i class="mobile-icon fas fa-comments"></i> <a href="#">Comments</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+	  	<header>
+            <div id="mobile-menu-icon" class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
+	  		<button class="apply-button">Apply Now</button>
+	  	</header>
+
+	  	<nav class="main-nav-container">
+	  		<ul class="main-nav">
+	    		<li><a href="#">Home</a></li>
+	    		<li><a href="#">Live Happy</a></li>
+	    		<li><a href="#">Live Healthy</a></li>
+	    	</ul>
+	  	</nav>
+
+  	<i class="fas fa-bars"></i>
     <!--script src="build/app.js"></script-->
     <div class="carousel">
     	<ul>
-    		<li></li>
-    		<li></li>
+    		<li class="image-slide-show-initial slide-show-active">
+                <img src="src/assets/images/cat.jpg" class="active">
+                <div class="image-description">
+                    <p class="description-header">Waiting for the right moment?</p>
+                    <p class="description-content">Sometimes the right time to start is now.</p>
+                    <button>Special Delivery</button>
+                </div>
+            </li>
+    		<li class="image-slide-show-initial">
+    			<img src="src/assets/images/ducks.jpg">
+    			<div class="image-description">
+    				<p class="description-header">Building Better Leaders</p>
+    				<p class="description-content">Without ducking out of the holiday party too quick.</p>
+    				<button>Free Advise</button>
+    			</div>
+    		</li>
     	</ul>
+        <div id="previous-image-button" class="previous-button-light">
+            <i class="fas fa-angle-left"></i>
+        </div>
+        <div id="next-image-button" class="next-button-light">
+            <i class="fas fa-angle-right"></i>
+        </div>
     </div>
 
     <div class="main">
@@ -37,35 +73,39 @@
 
 	    	<div class="link-container">
 	    		<ul>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
 		    	</ul>
 		    	<ul>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
-		    		<li><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
 		    	</ul>
 	    	</div>
     	</div>
     	
 	    <div class="comments-container">
-	    	<h3 id="comment-header">Comments</h3>
-	    	<ul id="comments">
+	    	<ul id="comments-box" class="comments-box">
 
 	    	</ul>
-	    	<div id="previous-button">
-		    	PREVIOUS
+	    	<div class="carousel-buttons">
+		    	<div id="previous-button" class="previous-button">
+			    	<i class="fas fa-angle-left"></i>
+			    </div>
+			    <div id="next-button" class="next-button">
+			    	<i class="fas fa-angle-right"></i>
+			    </div>
 		    </div>
-		    <div id="next-button">
-		    	NEXT
+		    <div id="selected-commenters-info" class="selected-commenters-info">
 		    </div>
-		    <div id="selected-commenters-info">
-		    </div>
+            <div class="comment-icon">
+                <i class="fas fa-quote-right"></i>
+            </div>
 	    </div>
 	</div>
     <div class="free-advise">
@@ -77,8 +117,17 @@
     	<button>Box Model</button>
     </div>
     <div class="footer">
-    	<p>COPYRIGHT © 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+    	<p>COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+    	<div class="footer-links">
+    		<a href="#">Link1</a>
+    		<a href="#">Link2</a>
+    		<a href="#">Link3</a>
+    		<a href="#">Link4</a>
+    	</div>
+    </div>
+</div>
     </div>
     <script src="src/js/main.js" type="module"></script>
   </body>
 </html>
+
