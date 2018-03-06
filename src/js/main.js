@@ -28,22 +28,13 @@
 
 	commentersInfo.innerHTML = sortedComments[0].name;
 
-	console.log("all comments: " + Object.keys(sortedComments)[0]);
-
-	
-
 	for(var key in sortedComments){
-	  console.log("key: " + key + ' - ' + sortedComments[key].comment);
 	  let indCommentContainer = document.createElement("li");
 	  indCommentContainer.innerHTML = sortedComments[key].comment;
 	  indCommentContainer.className = 'slide-show-initial';
 	  
 	  if(key === '0') {
 	  	indCommentContainer.className += ' ' + 'slide-show-active';
-	  	//indCommentContainer.setAttribute('style', "display:block");
-	  	console.log("first key: " + key + ' - ' + sortedComments[key].comment);
-	  	console.log(typeof(key));
-	  	console.log("value: " + key.comment);
 	  }
 	  commentSection.appendChild(indCommentContainer);
 	  sortedComments[key].timestamp = convertTimeStamp(sortedComments[key].timestamp);
@@ -71,9 +62,7 @@
 		}
 		
 		listItems[previousIndex].classList.remove('slide-show-active');
-		//listItems[previousIndex].removeAttribute('style');
 		listItems[indexCounter].classList.add('slide-show-active');
-		///listItems[indexCounter].setAttribute('style', 'display:block');
 	}
 
 	const mainContent = document.getElementsByClassName('main-content');
@@ -90,8 +79,6 @@
 
 	bindEvent('previous-button');
 	bindEvent('next-button');
-	//bindEvent('');
-	//bindEvent('');
 	let mobileMenu = document.getElementById('mobile-menu-icon');
 	mobileMenu.addEventListener("click", toggleMobileMenuDisplay, false);
 
