@@ -6,11 +6,41 @@ html, body {
   color: #fff;
   max-width: 1440px; }
 
-.mobile-menu {
+.wrapper {
+  display: flex;
+  overflow: hidden; }
+
+.mobile-menu-con {
   display: none; }
 
+.mobile-icon {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin-right: 20px; }
+
+.mobile-nav {
+  min-width: 250px;
+  overflow: hidden;
+  overscroll-behavior-x: none;
+  background-color: #222222;
+  display: none; }
+  @media only screen and (max-width: 1023px) {
+    .mobile-nav {
+      display: block; } }
+  .mobile-nav ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 50px; }
+    .mobile-nav ul li {
+      margin: 30px 0; }
+      .mobile-nav ul li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold; }
+
 @media only screen and (max-width: 1023px) {
-  .mobile-menu {
+  .mobile-menu-icon {
     color: #8A8A8A;
     font-size: 2.7rem;
     position: relative;
@@ -39,9 +69,21 @@ button {
 @media only screen and (max-width: 1023px) {
   .carousel {
     margin-bottom: 40px; } }
-.active {
-  display: block; }
+.slide-show-initial, .image-slide-show-initial {
+  display: none;
+  opacity: 0; }
 
+.slide-show-active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  animation: fade 2s; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .next-button {
   float: left;
   padding-left: 30px;
@@ -52,15 +94,35 @@ button {
   padding-right: 30px;
   cursor: pointer; }
 
+.next-button-light {
+  color: #FFF;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  font-size: 5rem;
+  right: 9px; }
+
+.previous-button-light {
+  color: #FFFFFF;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  font-size: 5rem;
+  left: 9px;
+  text-align: right; }
+
 header {
   height: 40px; }
 
-nav {
+.main-nav-container {
   height: 39px;
   margin: 27px 0 24px 0; }
 
+.main-content {
+  min-width: 360px; }
+
 @media only screen and (max-width: 1023px) {
-  nav {
+  .main-content .main-nav-container {
     display: none; } }
 .main-nav {
   display: flex;
@@ -79,6 +141,12 @@ nav {
       font-weight: bold;
       text-decoration: none;
       cursor: pointer; }
+
+.carousel {
+  position: relative; }
+  @media only screen and (max-width: 1023px) {
+    .carousel .next-button-light, .carousel .previous-button-light {
+      display: none; } }
 
 .image-description {
   position: absolute;
@@ -114,6 +182,7 @@ nav {
         margin: 20px 0 0 53px; } }
 
 .comments-container {
+  position: relative;
   color: #FFFFFF;
   width: 50%;
   font-size: 2.4rem;
@@ -125,8 +194,7 @@ nav {
     margin: 56px 0 0px 0; }
     .comments-container .comments-box li {
       font-size: 2.4rem;
-      padding-top: 40px;
-      display: none; }
+      padding-top: 40px; }
   .comments-container .carousel-buttons {
     color: #000000;
     float: left;
@@ -135,6 +203,11 @@ nav {
     color: #000000;
     float: right;
     margin-top: 10px; }
+  .comments-container .comment-icon {
+    color: #000000;
+    position: absolute;
+    top: 37px;
+    right: -12px; }
 
 @media only screen and (max-width: 1023px) {
   .comments-container {
@@ -169,11 +242,11 @@ nav {
       width: 100%; } }
   .main .content-header {
     font-size: 2rem;
-    border-bottom: 1px dotted #E5E5E5; }
+    border-bottom: 1px dotted #C4C4C4; }
     .main .content-header .content-light-border-bottom {
       font-size: 1.4rem;
       font-weight: normal;
-      color: #E5E5E5;
+      color: #C0C0C0;
       padding: 0 32px 0 0; }
   .main .content {
     font-size: 1.4rem;
@@ -248,7 +321,7 @@ nav {
     width: 17%;
     padding: 10px 0;
     margin: 0 0 205px 0;
-    left: 585px;
+    left: 42%;
     position: relative; }
 
 @media only screen and (max-width: 1023px) {

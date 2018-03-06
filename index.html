@@ -9,13 +9,23 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
+    <div class="wrapper">
+        <nav class="mobile-nav">
+            <ul class="list-unstyled components">
+                <li><i class="mobile-icon fas fa-home"></i> <a href="#">Home</a></li>
+                <li><i class="mobile-icon fas fa-globe"></i> <a href="#">Live Happy</a></li>
 
+                <li><i class="mobile-icon fas fa-heart"></i> <a href="#">Live Healthy</a></li>
+                <li><i class="mobile-icon fas fa-comments"></i> <a href="#">Comments</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
 	  	<header>
-            <div id="mobile-menu" class="mobile-menu"><i class="fas fa-bars"></i></div>
+            <div id="mobile-menu-icon" class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
 	  		<button class="apply-button">Apply Now</button>
 	  	</header>
 
-	  	<nav>
+	  	<nav class="main-nav-container">
 	  		<ul class="main-nav">
 	    		<li><a href="#">Home</a></li>
 	    		<li><a href="#">Live Happy</a></li>
@@ -27,7 +37,7 @@
     <!--script src="build/app.js"></script-->
     <div class="carousel">
     	<ul>
-    		<li>
+    		<li class="image-slide-show-initial slide-show-active">
                 <img src="src/assets/images/cat.jpg" class="active">
                 <div class="image-description">
                     <p class="description-header">Waiting for the right moment?</p>
@@ -35,15 +45,21 @@
                     <button>Special Delivery</button>
                 </div>
             </li>
-    		<!--li>
+    		<li class="image-slide-show-initial">
     			<img src="src/assets/images/ducks.jpg">
     			<div class="image-description">
     				<p class="description-header">Building Better Leaders</p>
     				<p class="description-content">Without ducking out of the holiday party too quick.</p>
     				<button>Free Advise</button>
     			</div>
-    		</li-->
+    		</li>
     	</ul>
+        <div id="previous-image-button" class="previous-button-light">
+            <i class="fas fa-angle-left"></i>
+        </div>
+        <div id="next-image-button" class="next-button-light">
+            <i class="fas fa-angle-right"></i>
+        </div>
     </div>
 
     <div class="main">
@@ -87,6 +103,9 @@
 		    </div>
 		    <div id="selected-commenters-info" class="selected-commenters-info">
 		    </div>
+            <div class="comment-icon">
+                <i class="fas fa-quote-right"></i>
+            </div>
 	    </div>
 	</div>
     <div class="free-advise">
@@ -105,6 +124,8 @@
     		<a href="#">Link3</a>
     		<a href="#">Link4</a>
     	</div>
+    </div>
+</div>
     </div>
     <script src="src/js/main.js" type="module"></script>
   </body>

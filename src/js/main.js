@@ -12,13 +12,11 @@
 
 	function convertTimeStamp(timestamp){
 	  let a = new Date(timestamp);
-	  let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 	  let year = a.getFullYear();
 	  let month = a.getMonth();
 	  let date = a.getDate();
-	  let
-	   time = month + '/' + date + '/' + year ;
-	  return time;
+	  let newTimeStamp = month + '/' + date + '/' + year ;
+	  return newTimeStamp;
 	}
 
 	let sortedComments = comments.sort(function(a, b) {
@@ -48,9 +46,11 @@
 	  console.log("key: " + key + ' - ' + sortedComments[key].comment);
 	  let indCommentContainer = document.createElement("li");
 	  indCommentContainer.innerHTML = sortedComments[key].comment;
+	  indCommentContainer.className = 'slide-show-initial';
 	  
 	  if(key === '0') {
-	  	indCommentContainer.className = 'active';
+	  	indCommentContainer.className += ' ' + 'slide-show-active';
+	  	//indCommentContainer.setAttribute('style', "display:block");
 	  	console.log("first key: " + key + ' - ' + sortedComments[key].comment);
 	  	console.log(typeof(key));
 	  	console.log("value: " + key.comment);
@@ -60,20 +60,47 @@
 	}
 
 	commentersInfo.innerHTML = sortedComments[0].name + ", " + sortedComments[0].timestamp;
+	let indexCounter = 0;
+	let previousIndex;
+	let listItems = document.getElementsByClassName('slide-show-initial');
+	let toggleList = element => {
+		
+		previousIndex = indexCounter;
+		if(element === 'next-button') {
 
-	let toggleList = () => {
-		alert("it works");
+			indexCounter += 1;
+			if(indexCounter > (listItems.length -1)) {
+				indexCounter = 0;
+			}
+		}
+		else {
+			indexCounter -= 1;
+			if(indexCounter < 0 ) {
+				indexCounter += listItems.length;
+			}
+		}
+		
+		listItems[previousIndex].classList.remove('slide-show-active');
+		//listItems[previousIndex].removeAttribute('style');
+		listItems[indexCounter].classList.add('slide-show-active');
+		///listItems[indexCounter].setAttribute('style', 'display:block');
+	}
+
+	let toggleMobileMenuDisplay = () => {
+		alert("works here");
 	}
 
 	let bindEvent = element => {
 		let prevElement = document.getElementById(element);
-		prevElement.addEventListener("click", toggleList, false);
+		prevElement.addEventListener("click", () =>{toggleList(element)}, false);
 	}
 
 	bindEvent('previous-button');
 	bindEvent('next-button');
 	//bindEvent('');
 	//bindEvent('');
+	let mobileMenu = document.getElementById('mobile-menu-icon');
+	mobileMenu.addEventListener("click", toggleMobileMenuDisplay, false);
 
 })();
 

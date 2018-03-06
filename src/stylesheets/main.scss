@@ -6,12 +6,51 @@ html, body {
 	color: #fff;
 	max-width: 1440px;
 }
-.mobile-menu {
+
+.wrapper {
+	display: flex;
+	overflow: hidden;
+}
+
+.mobile-menu-con {
 	display: none;
 }
 
+.mobile-icon {
+	font-size: 1.6rem;
+	color: #FFFFFF;
+	margin-right: 20px;
+}
+
+.mobile-nav {
+	min-width: 250px;
+    overflow: hidden;
+    overscroll-behavior-x: none;
+    background-color: #222222;
+    display: none;
+
+    @media only screen and (max-width: 1023px) {
+    	display: block;
+    }
+    
+    ul {
+    	list-style-type: none;
+    	margin-left: 20px;
+    	margin-top: 50px;
+    	li {
+    		margin: 30px 0;
+    		a {
+    			color: #FFFFFF;
+    			text-decoration: none;
+    			font-size: 1.8rem;
+    			font-weight: bold;
+    		}
+    	}
+    }
+}
+
 @media only screen and (max-width: 1023px) {
-	.mobile-menu {
+	.mobile-menu-icon {
 		color: #8A8A8A;
 	    font-size: 2.7rem;
 	    position: relative;
@@ -52,8 +91,28 @@ button {
 	}
 }
 
-.active {
+
+
+.slide-show-initial, .image-slide-show-initial {
+	display:none;
+	opacity: 0;
+}
+
+.slide-show-active {
 	display: block;
+	visibility: visible;
+    opacity: 1;
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .next-button {
@@ -68,17 +127,40 @@ button {
     cursor: pointer;
 }
 
+.next-button-light {
+    color: #FFF;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    font-size: 5rem;
+    right: 9px;
+}
+
+.previous-button-light {
+	color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    font-size: 5rem;
+    left: 9px;
+    text-align: right;
+}
+
 header {
 	height: 40px;
 }
 
-nav {
+.main-nav-container {
 	height: 39px;
 	margin: 27px 0 24px 0;
 }
 
+.main-content {
+	min-width: 360px;
+}
+
 @media only screen and (max-width: 1023px) {
-	nav {
+	.main-content .main-nav-container {
 		display: none;
 	}
 }
@@ -104,6 +186,18 @@ nav {
 		}
 	} 
 }
+
+.carousel {
+	position: relative;
+
+	@media only screen and (max-width: 1023px) {
+		.next-button-light, .previous-button-light {
+			display: none;
+		}
+	}
+}
+
+
 
 .image-description {
 	position: absolute;
@@ -146,7 +240,7 @@ nav {
 }
 
 .comments-container {
-	
+	position: relative;
 	color: #FFFFFF;
 	width: 50%;
 	font-size: 2.4rem;
@@ -160,7 +254,6 @@ nav {
 		li {
 			font-size: 2.4rem;
 			padding-top: 40px;
-			display: none;
 		}
 	}
 
@@ -174,6 +267,13 @@ nav {
 		color: #000000;
 		float: right;
 		margin-top: 10px;
+	}
+
+	.comment-icon {
+		color: #000000;
+    	position: absolute;
+    	top: 37px;
+    	right: -12px;
 	}
 }
 
@@ -224,12 +324,12 @@ nav {
 
 	.content-header {
 		font-size: 2rem;
-		border-bottom: 1px dotted #E5E5E5;
+		border-bottom: 1px dotted #C4C4C4;
 
 		.content-light-border-bottom {
 			font-size: 1.4rem;
 			font-weight: normal;
-			color: #E5E5E5;
+			color: #C0C0C0;
 			
 			padding: 0 32px 0 0;
 		}
@@ -334,7 +434,7 @@ nav {
     	width: 17%;
     	padding: 10px 0;
     	margin: 0 0 205px 0;
-    	left: 585px;
+    	left: 42%;
     	position: relative;
 	}
 	
