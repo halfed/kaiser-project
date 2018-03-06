@@ -19,14 +19,11 @@ html, body {
   margin-right: 20px; }
 
 .mobile-nav {
+  margin-left: -250px;
   min-width: 250px;
   overflow: hidden;
-  overscroll-behavior-x: none;
   background-color: #222222;
   display: none; }
-  @media only screen and (max-width: 1023px) {
-    .mobile-nav {
-      display: block; } }
   .mobile-nav ul {
     list-style-type: none;
     margin-left: 20px;
@@ -38,6 +35,10 @@ html, body {
         text-decoration: none;
         font-size: 1.8rem;
         font-weight: bold; }
+
+.mobile-nav-active {
+  display: block;
+  margin-left: 0px; }
 
 @media only screen and (max-width: 1023px) {
   .mobile-menu-icon {
@@ -118,7 +119,7 @@ header {
   height: 39px;
   margin: 27px 0 24px 0; }
 
-.main-content {
+.main-content-width {
   min-width: 360px; }
 
 @media only screen and (max-width: 1023px) {

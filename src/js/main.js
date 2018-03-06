@@ -28,16 +28,6 @@
 
 	commentersInfo.innerHTML = sortedComments[0].name;
 
-	/*let allComments = sortedComments.map(function(result) {
-		let indCommentContainer = document.createElement("li");
-		indCommentContainer.innerHTML = result.comment;
-		commentSection.appendChild(indCommentContainer);
-		result.timestamp = convertTimeStamp(result.timestamp);
-		/*return (
-				indCommentContainer
-			);*/
-	//});
-
 	console.log("all comments: " + Object.keys(sortedComments)[0]);
 
 	
@@ -62,7 +52,7 @@
 	commentersInfo.innerHTML = sortedComments[0].name + ", " + sortedComments[0].timestamp;
 	let indexCounter = 0;
 	let previousIndex;
-	let listItems = document.getElementsByClassName('slide-show-initial');
+	const listItems = document.getElementsByClassName('slide-show-initial');
 	let toggleList = element => {
 		
 		previousIndex = indexCounter;
@@ -86,8 +76,11 @@
 		///listItems[indexCounter].setAttribute('style', 'display:block');
 	}
 
+	const mainContent = document.getElementsByClassName('main-content');
+	const mobileNavContainer = document.getElementsByClassName('mobile-nav');
 	let toggleMobileMenuDisplay = () => {
-		alert("works here");
+		mainContent[0].classList.toggle('main-content-width');
+		mobileNavContainer[0].classList.toggle('mobile-nav-active');
 	}
 
 	let bindEvent = element => {

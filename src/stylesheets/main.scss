@@ -23,14 +23,14 @@ html, body {
 }
 
 .mobile-nav {
+	margin-left: -250px;
 	min-width: 250px;
     overflow: hidden;
-    overscroll-behavior-x: none;
     background-color: #222222;
     display: none;
 
     @media only screen and (max-width: 1023px) {
-    	display: block;
+    	//display: block;
     }
     
     ul {
@@ -47,6 +47,11 @@ html, body {
     		}
     	}
     }
+}
+
+.mobile-nav-active {
+	display: block;
+	margin-left: 0px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -155,7 +160,7 @@ header {
 	margin: 27px 0 24px 0;
 }
 
-.main-content {
+.main-content-width {
 	min-width: 360px;
 }
 
