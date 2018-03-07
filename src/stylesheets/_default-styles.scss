@@ -1,0 +1,25 @@
+/*-----DEFUALT PAGE STYLE VALUES, ANY STYLE SHEET CAN IMPORT MIXINS AND HAVE THEIR OWN DEFAULT STYLES, IF NOT CAN USE THESE-----*/
+$primary-background-color: #FFFFFF;
+$secondary-background-color: #222222;
+$orange-background-color: #F58E5B;
+$green-background-color: #8AB679;
+$primary-font-color: #FFFFFF;
+$secondary-font-color: #000000;
+$font-weight-bold: 600;
+$font-family: sans-serif;
+
+/*------BUTTONS-----*/
+$button-background-color-transparent: transparent;
+$button-font-size-big: 2.4rem;
+$button-border: 2px solid $primary-font-color;
+$border-radius: 3px;
+$button-font-color: $primary-font-color;
+$button-border-radius: 3px;
+$button-width-big: 22%;
+$button-width-medium: 17%;
+
+/*-----LINKS-----*/
+$a-link-text-decoration-none: none;
+$a-link-font-weight: $font-weight-bold;
+
+

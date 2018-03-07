@@ -1,9 +1,14 @@
+
+@import "default-styles";
+@import "button-and-link-styles";
+@import "mobile-nav";
+
 html, body {
-	font-family: sans-serif;
+	font-family: $font-family;
 	font-size: 62.5%;
 	height: 100%;
 	margin: 0 auto;
-	color: #fff;
+	color: $primary-font-color;
 	max-width: 1440px;
 }
 
@@ -12,68 +17,9 @@ html, body {
 	overflow: hidden;
 }
 
-.mobile-menu-con {
-	display: none;
-}
-
-.mobile-icon {
-	font-size: 1.6rem;
-	color: #FFFFFF;
-	margin-right: 20px;
-}
-
-.mobile-nav {
-	margin-left: -250px;
-	min-width: 250px;
-    overflow: hidden;
-    background-color: #222222;
-    display: none;
-
-    @media only screen and (max-width: 1023px) {
-    	//display: block;
-    }
-    
-    ul {
-    	list-style-type: none;
-    	margin-left: 20px;
-    	margin-top: 50px;
-    	li {
-    		margin: 30px 0;
-    		a {
-    			color: #FFFFFF;
-    			text-decoration: none;
-    			font-size: 1.8rem;
-    			font-weight: bold;
-    		}
-    	}
-    }
-}
-
-.mobile-nav-active {
-	display: block;
-	margin-left: 0px;
-}
-
-@media only screen and (max-width: 1023px) {
-	.mobile-menu-icon {
-		color: #8A8A8A;
-	    font-size: 2.7rem;
-	    position: relative;
-	    margin: 14px 20px 30px 20px;
-	    float: left;
-	    display: block;
-	    cursor: pointer;
-	}
-}
-
-button {
-	cursor: pointer;
-}
-
 .carousel ul {
 	padding: 0;
 	li {
-		//display: none;
 		position: relative;
     	text-align: center;
     	@media only screen and (max-width: 1023px) {
@@ -95,8 +41,6 @@ button {
 		margin-bottom: 40px;
 	}
 }
-
-
 
 .slide-show-initial, .image-slide-show-initial {
 	display:none;
@@ -133,7 +77,7 @@ button {
 }
 
 .next-button-light {
-    color: #FFF;
+    color: $primary-font-color;
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -142,7 +86,7 @@ button {
 }
 
 .previous-button-light {
-	color: #FFFFFF;
+	color: $primary-font-color;
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -183,11 +127,7 @@ header {
 	    justify-content: center;
 
 		a {
-			color: #FFFFFF;
-			font-size: 1.4rem;
-			font-weight: bold;
-			text-decoration: none;
-			cursor: pointer;
+			@include a-link-styles($primary-font-color, $a-link-text-decoration-none, 1.4rem, $font-weight-bold);
 		}
 	} 
 }
@@ -202,8 +142,6 @@ header {
 	}
 }
 
-
-
 .image-description {
 	position: absolute;
     top: 33%;
@@ -216,7 +154,7 @@ header {
 
 	.description-header {
 	    font-size: 3.6rem;
-	    color: #FFFFFF;
+	    color: $primary-font-color;
 	    padding: 0;
 	    margin: 0;
 	    @media only screen and (max-width: 1023px) {
@@ -225,7 +163,7 @@ header {
 	}
 	.description-content {
 		font-size: 1.6rem;
-    	color: #FFFFFF;
+    	color: $primary-font-color;
     	margin: 5px 0 18px 0;
 	}
 
@@ -235,7 +173,6 @@ header {
 	    color: #FFFFFF;
 	    border: none;
 	    padding: 15px 35px 15px 35px;
-	    border-radius: 2px;
 	    @media only screen and (max-width: 1023px) {
 	    	font-size: 1.6rem;
 	    	padding: 7px 20px 7px 20px;
@@ -246,13 +183,13 @@ header {
 
 .comments-container {
 	position: relative;
-	color: #FFFFFF;
+	color: $primary-font-color;
 	width: 50%;
 	font-size: 2.4rem;
 	margin-left: 17px;
 
 	.comments-box {
-		background-color: #8AB679;
+		background-color: $green-background-color;
 		height: 178px;
 		list-style-type: none;
 		margin: 56px 0 0px 0;
@@ -263,19 +200,19 @@ header {
 	}
 
 	.carousel-buttons {
-		color: #000000;
+		color: $secondary-font-color;
 		float: left;
     	font-size: 4rem;
 	}
 
 	.selected-commenters-info {
-		color: #000000;
+		color: $secondary-font-color;
 		float: right;
 		margin-top: 10px;
 	}
 
 	.comment-icon {
-		color: #000000;
+		color: $secondary-font-color;
     	position: absolute;
     	top: 37px;
     	right: -12px;
@@ -294,9 +231,9 @@ header {
     height: 40px;
 	border: none;
 	float: right;
-	color: #FFFFFF;
+	color: $primary-font-color;
 	font-size: 1.4rem;
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -308,8 +245,8 @@ header {
 
 .main {
 	display: flex;
-	color: #000000;
-	font-weight: bold;
+	color: $secondary-font-color;
+	font-weight: $font-weight-bold;
 	padding: 0 9%;
 	margin: 0 0 100px 0;
 
@@ -319,10 +256,7 @@ header {
 
 	.content-container {
 		width: 50%;
-	}
-
-	@media only screen and (max-width: 1023px) {
-		.content-container {
+		@media only screen and (max-width: 1023px) {
 			width: 100%;
 		}
 	}
@@ -335,7 +269,6 @@ header {
 			font-size: 1.4rem;
 			font-weight: normal;
 			color: #C0C0C0;
-			
 			padding: 0 32px 0 0;
 		}
 	}
@@ -350,17 +283,13 @@ header {
 		justify-content: space-around;
 
 		ul {
-
 			list-style-type: none;
 			padding: 0;
 
 			li {
 				font-size: 1.2rem;
 				a {
-				    font-size: 2rem;
-				    color: black;
-				    font-weight: bold;
-				    text-decoration: none;
+					@include a-link-styles($secondary-font-color, $a-link-text-decoration-none, 2rem, $font-weight-bold);
 				    padding-left: 10px;
 
 				    @media only screen and (max-width: 1023px) {
@@ -372,30 +301,26 @@ header {
 	}
 }
 
-
-
 .free-advise {
-	background-color: #F58E5B;
+	background-color: $orange-background-color;
 	padding: 0px 9%;
 	height: 104px;
 
 	p {
-		color: #FFFFFF;
+		color: $primary-font-color;
 		font-size: 2.4rem;
-		font-weight: bold;
+		font-weight: $font-weight-bold;
 		text-align: center;
-		padding: 24px 0;
+		padding: 39px 0 24px 0;
+		@media only screen and (max-width: 1023px) {
+	    	padding: 24px 0;
+	    }
     	margin: 0;
     	float: left;
 	}
 
 	button {
-		background-color: transparent;
-		font-size: 2.4rem;
-		color: #FFFFFF;
-		border: 2px solid #FFFFFF;
-		border-radius: 3px;
-    	width: 17%;
+		@include button-styles($button-background-color-transparent, $button-font-size-big, $button-border, $button-border-radius, $button-font-color, $button-width-medium);
     	padding: 10px 0;
     	margin: 24px 0 24px 0;
     	float: right;
@@ -422,24 +347,19 @@ header {
 	padding: 0px 50px;
 
 	p {
-		color: #FFFFFF;
+		color: $primary-font-color;
 		font-size: 3.2rem;
-		font-weight: bold;
+		font-weight: $font-weight-bold;
 		text-align: center;
 		padding: 212px 0 24px 0;
     	margin: 0;
 	}
 
 	button {
-		background-color: transparent;
-		font-size: 24px;
-		color: #FFFFFF;
-		border: 2px solid #FFFFFF;
-		border-radius: 3px;
-    	width: 17%;
+		@include button-styles($button-background-color-transparent, $button-font-size-big, $button-border, $button-border-radius, $button-font-color, $button-width-big);
     	padding: 10px 0;
     	margin: 0 0 205px 0;
-    	left: 42%;
+    	left: 38%;
     	position: relative;
 	}
 	
@@ -460,45 +380,4 @@ header {
 	}
 }
 
-.footer {
-	background-color: #222222;
-	color: #FFFFFF;
-	
-	
-	border-top: 3px solid #8A8A8A;
-
-	p {
-		display: none;
-	}
-
-	
-
-	.footer-links {
-		text-align: right;
-		padding: 40px 0 40px 0;
-		margin: 0 40px 0 0;
-		a {
-			color: #FFFFFF;
-			text-decoration: none;
-			font-weight: bold;
-			margin: 0 0 0 64px;
-			font-size: 2rem;
-			cursor: pointer;
-		}
-	}
-
-	@media only screen and (max-width: 1023px) {
-		p {
-			margin: 0;
-			padding: 24px 0;
-			text-align: center;
-			padding: 40px 0 40px 0;
-			font-size: 1.4rem;
-			display: block;
-		}
-
-		.footer-links {
-			display: none;
-		}
-	}
-}
+@import "footer";
