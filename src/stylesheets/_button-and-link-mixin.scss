@@ -1,0 +1,19 @@
+//@import "default-styles";
+
+@mixin button-styles($background-color, $font-size, $border, $border-radius, $color, $width) {
+	background-color: $background-color;
+	width: $width;
+	cursor: pointer;
+	font-size: $font-size;
+	border: $border;
+	border-radius: $border-radius;
+	color: $color;
+}
+
+@mixin a-link-styles($color, $decoration, $font-size, $font-weight) {
+	color: $color;
+	text-decoration: $decoration;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	cursor: pointer;
+}

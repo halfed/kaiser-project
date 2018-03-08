@@ -1,15 +1,7 @@
-html, body {
-  font-family: sans-serif;
-  font-size: 62.5%;
-  height: 100%;
-  margin: 0 auto;
-  color: #fff;
-  max-width: 1440px; }
-
-.wrapper {
-  display: flex;
-  overflow: hidden; }
-
+/*-----DEFUALT PAGE STYLE VALUES, ANY STYLE SHEET CAN IMPORT MIXINS AND HAVE THEIR OWN DEFAULT STYLES, IF NOT CAN USE THESE-----*/
+/*-----DEFUALT PAGE STYLE VALUES, ANY STYLE SHEET CAN IMPORT MIXINS AND HAVE THEIR OWN DEFAULT STYLES, IF NOT CAN USE THESE-----*/
+/*------BUTTONS-----*/
+/*-----LINKS-----*/
 .mobile-menu-con {
   display: none; }
 
@@ -34,7 +26,8 @@ html, body {
         color: #FFFFFF;
         text-decoration: none;
         font-size: 1.8rem;
-        font-weight: bold; }
+        font-weight: 600;
+        cursor: pointer; }
 
 .mobile-nav-active {
   display: block;
@@ -49,23 +42,47 @@ html, body {
     float: left;
     display: block;
     cursor: pointer; } }
-button {
-  cursor: pointer; }
+.main-nav-container {
+  height: 39px;
+  margin: 27px 0 24px 0; }
 
-.carousel ul {
-  padding: 0; }
-  .carousel ul li {
-    position: relative;
-    text-align: center; }
-    @media only screen and (max-width: 1023px) {
-      .carousel ul li {
-        height: 298px;
-        width: auto; } }
-    .carousel ul li img {
-      width: 100%; }
+.main-nav {
+  display: flex;
+  float: right; }
+  .main-nav li {
+    background-color: #1F272A;
+    width: 228px;
+    height: 39px;
+    align-items: center;
+    display: flex;
+    margin-left: 2px;
+    justify-content: center; }
+    .main-nav li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer; }
+
+.carousel {
+  position: relative; }
+  @media only screen and (max-width: 1023px) {
+    .carousel .next-button-light, .carousel .previous-button-light {
+      display: none; } }
+  .carousel ul {
+    padding: 0; }
+    .carousel ul li {
+      position: relative;
+      text-align: center; }
       @media only screen and (max-width: 1023px) {
-        .carousel ul li img {
-          height: 298px; } }
+        .carousel ul li {
+          height: 298px;
+          width: auto; } }
+      .carousel ul li img {
+        width: 100%; }
+        @media only screen and (max-width: 1023px) {
+          .carousel ul li img {
+            height: 298px; } }
 
 @media only screen and (max-width: 1023px) {
   .carousel {
@@ -96,7 +113,7 @@ button {
   cursor: pointer; }
 
 .next-button-light {
-  color: #FFF;
+  color: #FFFFFF;
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -112,43 +129,72 @@ button {
   left: 9px;
   text-align: right; }
 
-header {
-  height: 40px; }
-
-.main-nav-container {
-  height: 39px;
-  margin: 27px 0 24px 0; }
-
 .main-content-width {
   min-width: 360px; }
+
+.main {
+  display: flex;
+  color: #000000;
+  font-weight: 600;
+  padding: 0 9%;
+  margin: 0 0 100px 0; }
+  @media only screen and (max-width: 1023px) {
+    .main {
+      margin: 0 0 43px 0; } }
+  .main .content-container {
+    width: 50%; }
+    @media only screen and (max-width: 1024px) {
+      .main .content-container {
+        width: 100%; } }
+  .main .content-header {
+    font-size: 2rem;
+    border-bottom: 1px dotted #C4C4C4; }
+    .main .content-header .content-light-border-bottom {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #C0C0C0;
+      padding: 0 32px 0 0; }
+  .main .content {
+    font-size: 1.4rem;
+    font-weight: normal; }
+  .main .link-container {
+    display: flex;
+    justify-content: space-around; }
+    .main .link-container ul {
+      list-style-type: none;
+      padding: 0; }
+      .main .link-container ul li {
+        font-size: 2rem; }
+        .main .link-container ul li a {
+          color: #000000;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 600;
+          cursor: pointer;
+          padding-left: 10px; }
+          @media only screen and (max-width: 1023px) {
+            .main .link-container ul li a {
+              font-size: 1.6rem; } }
+
+html, body {
+  font-family: sans-serif;
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0 auto;
+  color: #FFFFFF;
+  max-width: 1440px; }
+
+.wrapper {
+  display: flex;
+  overflow: hidden; }
+
+header {
+  height: 40px; }
 
 @media only screen and (max-width: 1023px) {
   .main-content .main-nav-container {
     display: none; } }
-.main-nav {
-  display: flex;
-  float: right; }
-  .main-nav li {
-    background-color: #1F272A;
-    width: 228px;
-    height: 39px;
-    align-items: center;
-    display: flex;
-    margin-left: 2px;
-    justify-content: center; }
-    .main-nav li a {
-      color: #FFFFFF;
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-decoration: none;
-      cursor: pointer; }
-
-.carousel {
-  position: relative; }
-  @media only screen and (max-width: 1023px) {
-    .carousel .next-button-light, .carousel .previous-button-light {
-      display: none; } }
-
+/*-----WE COULD MODULARIZE THESE BUT IT SEEMS SPECIFIC TO THIS PAGE ------*/
 .image-description {
   position: absolute;
   top: 33%;
@@ -174,8 +220,7 @@ header {
     font-size: 2.4rem;
     color: #FFFFFF;
     border: none;
-    padding: 15px 35px 15px 35px;
-    border-radius: 2px; }
+    padding: 15px 35px 15px 35px; }
     @media only screen and (max-width: 1023px) {
       .image-description button {
         font-size: 1.6rem;
@@ -210,7 +255,7 @@ header {
     top: 37px;
     right: -12px; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .comments-container {
     display: none; } }
 .apply-button {
@@ -221,55 +266,13 @@ header {
   float: right;
   color: #FFFFFF;
   font-size: 1.4rem;
-  font-weight: bold; }
+  font-weight: 600;
+  cursor: pointer; }
 
 @media only screen and (max-width: 1023px) {
   .apply-button {
-    width: 43%;
+    width: 135px;
     height: 55px; } }
-.main {
-  display: flex;
-  color: #000000;
-  font-weight: bold;
-  padding: 0 9%;
-  margin: 0 0 100px 0; }
-  @media only screen and (max-width: 1023px) {
-    .main {
-      margin: 0 0 43px 0; } }
-  .main .content-container {
-    width: 50%; }
-  @media only screen and (max-width: 1023px) {
-    .main .content-container {
-      width: 100%; } }
-  .main .content-header {
-    font-size: 2rem;
-    border-bottom: 1px dotted #C4C4C4; }
-    .main .content-header .content-light-border-bottom {
-      font-size: 1.4rem;
-      font-weight: normal;
-      color: #C0C0C0;
-      padding: 0 32px 0 0; }
-  .main .content {
-    font-size: 1.4rem;
-    font-weight: normal; }
-  .main .link-container {
-    display: flex;
-    justify-content: space-around; }
-    .main .link-container ul {
-      list-style-type: none;
-      padding: 0; }
-      .main .link-container ul li {
-        font-size: 1.2rem; }
-        .main .link-container ul li a {
-          font-size: 2rem;
-          color: black;
-          font-weight: bold;
-          text-decoration: none;
-          padding-left: 10px; }
-          @media only screen and (max-width: 1023px) {
-            .main .link-container ul li a {
-              font-size: 1.6rem; } }
-
 .free-advise {
   background-color: #F58E5B;
   padding: 0px 9%;
@@ -277,18 +280,22 @@ header {
   .free-advise p {
     color: #FFFFFF;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
-    padding: 24px 0;
+    padding: 39px 0 24px 0;
     margin: 0;
     float: left; }
+    @media only screen and (max-width: 1023px) {
+      .free-advise p {
+        padding: 24px 0; } }
   .free-advise button {
     background-color: transparent;
+    width: 17%;
+    cursor: pointer;
     font-size: 2.4rem;
-    color: #FFFFFF;
     border: 2px solid #FFFFFF;
     border-radius: 3px;
-    width: 17%;
+    color: #FFFFFF;
     padding: 10px 0;
     margin: 24px 0 24px 0;
     float: right; }
@@ -309,20 +316,21 @@ header {
   .box-model p {
     color: #FFFFFF;
     font-size: 3.2rem;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     padding: 212px 0 24px 0;
     margin: 0; }
   .box-model button {
     background-color: transparent;
-    font-size: 24px;
-    color: #FFFFFF;
+    width: 22%;
+    cursor: pointer;
+    font-size: 2.4rem;
     border: 2px solid #FFFFFF;
     border-radius: 3px;
-    width: 17%;
+    color: #FFFFFF;
     padding: 10px 0;
     margin: 0 0 205px 0;
-    left: 42%;
+    left: 38%;
     position: relative; }
 
 @media only screen and (max-width: 1023px) {
@@ -348,10 +356,10 @@ header {
     .footer .footer-links a {
       color: #FFFFFF;
       text-decoration: none;
-      font-weight: bold;
-      margin: 0 0 0 64px;
       font-size: 2rem;
-      cursor: pointer; }
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0 0 0 64px; }
   @media only screen and (max-width: 1023px) {
     .footer p {
       margin: 0;

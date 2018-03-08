@@ -1,16 +1,18 @@
 <!doctype html>
 <html>
   <head>
-  <title>Coding-Test</title>
+    <meta charset="utf-8">
+    <title>Coding-Test</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!--link rel="stylesheet" href="build/app.css" / -->
-    <link rel="stylesheet" href="src/stylesheets/main.css" />
+    <link href="https://fonts.google.com/?query=mont&category=Sans+Serif" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="build/css/main.min.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
     <div class="wrapper">
-        <nav class="mobile-nav">
+        <nav class="mobile-nav" role="navigation" aria-label="mobile navigation">
             <ul class="list-unstyled components">
                 <li><i class="mobile-icon fas fa-home"></i> <a href="#">Home</a></li>
                 <li><i class="mobile-icon fas fa-globe"></i> <a href="#">Live Happy</a></li>
@@ -21,11 +23,11 @@
         </nav>
         <div class="main-content">
 	  	<header>
-            <div id="mobile-menu-icon" class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
-	  		<button class="apply-button">Apply Now</button>
+            <div id="mobile-menu-icon" class="mobile-menu-icon" role="button" aria-label="mobile navigation link"><i class="fas fa-bars"></i></div>
+	  		<button class="apply-button" role="button" aria-label="Apply Now">Apply Now</buttonrole="button">
 	  	</header>
 
-	  	<nav class="main-nav-container">
+	  	<nav class="main-nav-container" role="navigation" aria-label="desktop navigation">
 	  		<ul class="main-nav">
 	    		<li><a href="#">Home</a></li>
 	    		<li><a href="#">Live Happy</a></li>
@@ -38,7 +40,7 @@
     <div class="carousel">
     	<ul>
     		<li class="image-slide-show-initial slide-show-active">
-                <img src="src/assets/images/cat.jpg" class="active">
+                <img src="src/assets/images/cat.jpg" class="active" alt="Waiting for the right moment">
                 <div class="image-description">
                     <p class="description-header">Waiting for the right moment?</p>
                     <p class="description-content">Sometimes the right time to start is now.</p>
@@ -46,7 +48,7 @@
                 </div>
             </li>
     		<li class="image-slide-show-initial">
-    			<img src="src/assets/images/ducks.jpg">
+    			<img src="src/assets/images/ducks.jpg" alt="Building Better Leaders">
     			<div class="image-description">
     				<p class="description-header">Building Better Leaders</p>
     				<p class="description-content">Without ducking out of the holiday party too quick.</p>
@@ -62,7 +64,7 @@
         </div>
     </div>
 
-    <div class="main">
+    <div class="main" role="main">
     	<div class="content-container">
     		<p class="content-header">
 	    		Welcome to Development<br/><span class="content-light-border-bottom">Please be thorough when coding...<span>
@@ -117,7 +119,7 @@
     	<button>Box Model</button>
     </div>
     <div class="footer">
-    	<p>COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+    	<p role="contentinfo">COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
     	<div class="footer-links">
     		<a href="#">Link1</a>
     		<a href="#">Link2</a>
@@ -127,7 +129,7 @@
     </div>
 </div>
     </div>
-    <script src="src/js/main.js" type="module"></script>
+    <script type="text/javascript" src="build/js/main.min.js"></script>
   </body>
 </html>
 

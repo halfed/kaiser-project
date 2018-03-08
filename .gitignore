@@ -1,3 +1,6 @@
 .DS_Store
 coding-test-sg (1).zip
 .sass-cache
+node_modules
+webpack.config.old.js
+

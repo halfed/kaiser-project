@@ -13,11 +13,28 @@ module.exports = function(grunt) {
     target: {
       files: [{
         expand: true,
-        cwd: 'css',
+        cwd: 'src/stylesheets',
         src: ['main.css', '!*.min.css'],
-        dest: 'src/stylesheets/',
+        dest: 'build/css/',
         ext: '.min.css'
       }]
+    }
+  },
+  uglify: {
+    my_target: {
+      files: {
+        'build/js/main.min.js': ['src/js/main.js']
+      }
+    }
+  },
+  watch: { // Compile everything into one task with Watch Plugin
+    css: {
+      files: 'src/stylesheets/*.scss',
+      tasks: ['sass', 'cssmin']
+    },
+    js: {
+      files: 'src/js/main.js',
+      tasks: ['uglify']
     }
   }
 });
@@ -26,6 +43,12 @@ grunt.loadNpmTasks('grunt-contrib-sass');
 
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+grunt.loadNpmTasks('grunt-contrib-uglify-es');
+
+grunt.loadNpmTasks('grunt-contrib-watch');
+
 // Default task(s).
-grunt.registerTask('default', ['sass']);
+// Register Grunt tasks
+grunt.registerTask('default', ['watch']);
+
 };
