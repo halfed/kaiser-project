@@ -1,7 +1,10 @@
-
+/*-----DEFUALT PAGE STYLE VALUES, ANY STYLE SHEET CAN IMPORT MIXINS AND HAVE THEIR OWN DEFAULT STYLES, IF NOT CAN USE THESE-----*/
 @import "default-styles";
-@import "button-and-link-styles";
+@import "button-and-link-mixin";
 @import "mobile-nav";
+@import "main-nav";
+@import "carousel";
+@import "main-content";
 
 html, body {
 	font-family: $font-family;
@@ -17,95 +20,8 @@ html, body {
 	overflow: hidden;
 }
 
-.carousel ul {
-	padding: 0;
-	li {
-		position: relative;
-    	text-align: center;
-    	@media only screen and (max-width: 1023px) {
-	    	height: 298px;
-	    	width: auto;
-	   	}
-
-		img {
-			width: 100%;
-			@media only screen and (max-width: 1023px) {
-	    	height: 298px;
-	    	}
-		}
-	}
-} 
-
-@media only screen and (max-width: 1023px) {
-	.carousel {
-		margin-bottom: 40px;
-	}
-}
-
-.slide-show-initial, .image-slide-show-initial {
-	display:none;
-	opacity: 0;
-}
-
-.slide-show-active {
-	display: block;
-	visibility: visible;
-    opacity: 1;
-    animation: fade 2s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.next-button {
-    float: left;
-    padding-left: 30px;
-    cursor: pointer;
-}
-
-.previous-button {
-	float: left;
-    padding-right: 30px;	
-    cursor: pointer;
-}
-
-.next-button-light {
-    color: $primary-font-color;
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    font-size: 5rem;
-    right: 9px;
-}
-
-.previous-button-light {
-	color: $primary-font-color;
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    font-size: 5rem;
-    left: 9px;
-    text-align: right;
-}
-
 header {
 	height: 40px;
-}
-
-.main-nav-container {
-	height: 39px;
-	margin: 27px 0 24px 0;
-}
-
-.main-content-width {
-	min-width: 360px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -113,35 +29,7 @@ header {
 		display: none;
 	}
 }
-
-.main-nav {
-	display: flex;
-	float: right;
-	li {
-		background-color: #1F272A;
-		width: 228px;
-		height: 39px;
-		align-items: center;
-	    display: flex;
-	    margin-left: 2px;
-	    justify-content: center;
-
-		a {
-			@include a-link-styles($primary-font-color, $a-link-text-decoration-none, 1.4rem, $font-weight-bold);
-		}
-	} 
-}
-
-.carousel {
-	position: relative;
-
-	@media only screen and (max-width: 1023px) {
-		.next-button-light, .previous-button-light {
-			display: none;
-		}
-	}
-}
-
+/*-----WE COULD MODULARIZE THESE BUT IT SEEMS SPECIFIC TO THIS PAGE ------*/
 .image-description {
 	position: absolute;
     top: 33%;
@@ -219,7 +107,7 @@ header {
 	}
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 	.comments-container {
 		display: none;
 	}
@@ -234,70 +122,13 @@ header {
 	color: $primary-font-color;
 	font-size: 1.4rem;
 	font-weight: $font-weight-bold;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 1023px) {
 	.apply-button {
-		width: 43%;
+		width: 135px;
     	height: 55px;
-	}
-}
-
-.main {
-	display: flex;
-	color: $secondary-font-color;
-	font-weight: $font-weight-bold;
-	padding: 0 9%;
-	margin: 0 0 100px 0;
-
-	@media only screen and (max-width: 1023px) {
-		margin: 0 0 43px 0;
-	}
-
-	.content-container {
-		width: 50%;
-		@media only screen and (max-width: 1023px) {
-			width: 100%;
-		}
-	}
-
-	.content-header {
-		font-size: 2rem;
-		border-bottom: 1px dotted #C4C4C4;
-
-		.content-light-border-bottom {
-			font-size: 1.4rem;
-			font-weight: normal;
-			color: #C0C0C0;
-			padding: 0 32px 0 0;
-		}
-	}
-
-	.content {
-		font-size: 1.4rem;
-		font-weight: normal;
-	}
-
-	.link-container {
-		display: flex;
-		justify-content: space-around;
-
-		ul {
-			list-style-type: none;
-			padding: 0;
-
-			li {
-				font-size: 1.2rem;
-				a {
-					@include a-link-styles($secondary-font-color, $a-link-text-decoration-none, 2rem, $font-weight-bold);
-				    padding-left: 10px;
-
-				    @media only screen and (max-width: 1023px) {
-				    	font-size: 1.6rem;
-				    }
-				}
-			}
-		}
 	}
 }
 

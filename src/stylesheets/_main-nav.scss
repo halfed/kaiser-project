@@ -1,0 +1,22 @@
+.main-nav-container {
+	height: 39px;
+	margin: 27px 0 24px 0;
+}
+
+.main-nav {
+	display: flex;
+	float: right;
+	li {
+		background-color: #1F272A;
+		width: 228px;
+		height: 39px;
+		align-items: center;
+	    display: flex;
+	    margin-left: 2px;
+	    justify-content: center;
+
+		a {
+			@include a-link-styles($primary-font-color, $a-link-text-decoration-none, 1.4rem, $font-weight-bold);
+		}
+	} 
+}

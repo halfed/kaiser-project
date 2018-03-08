@@ -1,64 +1,28 @@
-const autoprefixer = require('autoprefixer')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const path = require('path')
+var HTMLWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+  template: __dirname + '/index.html',
+  filename: 'index.html',
+  inject: 'body'
+});
 
-const loaders = {
-  css: {
-    loader: 'css-loader'
-  },
-  postcss: {
-    loader: 'postcss-loader',
-    options: {
-      plugins: (loader) => [
-        autoprefixer({
-          browsers: ['last 2 versions']
-        })
-      ]
-    }
-  },
-  sass: {
-    loader: 'sass-loader',
-    options: {
-      indentedSyntax: true,
-      includePaths: [path.resolve(__dirname, './src')]
-    }
-  }
-}
+const path = require("path");
 
-const config = {
+module.exports = {
   entry: {
-    app: ['./src/index']
-  },
-
+      app: __dirname + '/src/js/main.min.js'
+    },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      },
-      {
-        test: /\.sass$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [loaders.css, loaders.postcss, loaders.sass]
-        })
+        exclude: ["/node_modules/", "build/js/", "/src/js/comments.js", "Gruntfile.js", "webpack.config.old.js"],
+        loader: 'babel-loader'
       }
     ]
   },
-
   output: {
-    filename: '[name].js',
-    path: path.join(__dirname, './dist'),
-    publicPath: '/dist'
+    filename: "js/main.min.js",
+    path: __dirname + '/build/'
   },
-
-  plugins: [new ExtractTextPlugin('[name].css')],
-
-  resolve: {
-    extensions: ['.js', '.sass'],
-    modules: [path.join(__dirname, './src'), 'node_modules']
-  }
-}
-
-module.exports = config
+  plugins: [HTMLWebpackPluginConfig]
+};

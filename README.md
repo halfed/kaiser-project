@@ -63,3 +63,8 @@ npm run serve
 ## Goodluck!
 You're awesome and you got this, now go forth and show us what you got!
 
+##Addendum
+With Grunt installed, you can call grunt and save any changes to .css or .js files and it will build the files to the "build" folder, 
+
+I have a webpack.config file that is not in use but it could, based developing in say an "app" folder, build the html and add the js and css to the html file and insert the js file into the desired js folder. For now Grunt is doing all the work. 
+

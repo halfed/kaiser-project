@@ -1,0 +1,61 @@
+.main-content-width {
+	min-width: 360px;
+}
+
+.main {
+	display: flex;
+	color: $secondary-font-color;
+	font-weight: $font-weight-bold;
+	padding: 0 9%;
+	margin: 0 0 100px 0;
+
+	@media only screen and (max-width: 1023px) {
+		margin: 0 0 43px 0;
+	}
+
+	.content-container {
+		width: 50%;
+		@media only screen and (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+
+	.content-header {
+		font-size: 2rem;
+		border-bottom: 1px dotted #C4C4C4;
+
+		.content-light-border-bottom {
+			font-size: 1.4rem;
+			font-weight: normal;
+			color: #C0C0C0;
+			padding: 0 32px 0 0;
+		}
+	}
+
+	.content {
+		font-size: 1.4rem;
+		font-weight: normal;
+	}
+
+	.link-container {
+		display: flex;
+		justify-content: space-around;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+				font-size: 2rem;
+				a {
+					@include a-link-styles($secondary-font-color, $a-link-text-decoration-none, 2rem, $font-weight-bold);
+				    padding-left: 10px;
+
+				    @media only screen and (max-width: 1023px) {
+				    	font-size: 1.6rem;
+				    }
+				}
+			}
+		}
+	}
+}
