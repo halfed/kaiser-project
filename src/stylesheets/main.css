@@ -343,17 +343,17 @@ header {
       float: none;
       margin: 0 0 40px 0;
       left: 0; } }
-.footer {
+footer {
   background-color: #222222;
   color: #FFFFFF;
   border-top: 3px solid #8A8A8A; }
-  .footer p {
+  footer p {
     display: none; }
-  .footer .footer-links {
+  footer .footer-links {
     text-align: right;
     padding: 40px 0 40px 0;
     margin: 0 40px 0 0; }
-    .footer .footer-links a {
+    footer .footer-links a {
       color: #FFFFFF;
       text-decoration: none;
       font-size: 2rem;
@@ -361,14 +361,14 @@ header {
       cursor: pointer;
       margin: 0 0 0 64px; }
   @media only screen and (max-width: 1023px) {
-    .footer p {
+    footer p {
       margin: 0;
       padding: 24px 0;
       text-align: center;
       padding: 40px 0 40px 0;
       font-size: 1.4rem;
       display: block; }
-    .footer .footer-links {
+    footer .footer-links {
       display: none; } }
 
 /*# sourceMappingURL=main.css.map */

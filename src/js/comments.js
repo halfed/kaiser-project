@@ -1,4 +1,4 @@
-var comments = [
+let comments = [
   {"name":"Garfield","comment":"The most active thing about me is my imagination.","timestamp":69379200000},
   {"name":"Daffy Duck","comment":"Maybe if I stare at this paper long enough people will think I can read.","timestamp":1007683200000},
   {"name":"Bugs Bunny","comment":"Eh, what's up doc? Got any carrots?","timestamp":583113600000},
@@ -8,4 +8,4 @@ var comments = [
   {"name":"Mickey Mouse","comment":"To laugh at yourself is to love yourself.","timestamp":1215993600000}
   ];
 
-  export defalut {comments};
+export {comments};

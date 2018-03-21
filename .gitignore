@@ -3,4 +3,6 @@ coding-test-sg (1).zip
 .sass-cache
 node_modules
 webpack.config.old.js
+src/js/main-old-2.js
+src/js/main-old.js
 
