@@ -5,6 +5,7 @@
 @import "main-nav";
 @import "carousel";
 @import "main-content";
+@import "image-description";
 
 html, body {
 	font-family: $font-family;
@@ -29,45 +30,6 @@ header {
 		display: none;
 	}
 }
-/*-----WE COULD MODULARIZE THESE BUT IT SEEMS SPECIFIC TO THIS PAGE ------*/
-.image-description {
-	position: absolute;
-    top: 33%;
-    left: 8%;
-    text-align: left;
-
-    @media only screen and (max-width: 1023px) {
-		width: 80%;
-	}
-
-	.description-header {
-	    font-size: 3.6rem;
-	    color: $primary-font-color;
-	    padding: 0;
-	    margin: 0;
-	    @media only screen and (max-width: 1023px) {
-	    	font-size: 2.4rem;
-	    }
-	}
-	.description-content {
-		font-size: 1.6rem;
-    	color: $primary-font-color;
-    	margin: 5px 0 18px 0;
-	}
-
-	button {
-		background-color: #F58E5B;
-	    font-size: 2.4rem;
-	    color: #FFFFFF;
-	    border: none;
-	    padding: 15px 35px 15px 35px;
-	    @media only screen and (max-width: 1023px) {
-	    	font-size: 1.6rem;
-	    	padding: 7px 20px 7px 20px;
-	    	margin: 20px 0 0 53px;
-	    }
-	}
-}
 
 .comments-container {
 	position: relative;
@@ -75,7 +37,9 @@ header {
 	width: 50%;
 	font-size: 2.4rem;
 	margin-left: 17px;
-
+	@media only screen and (max-width: 1024px) {
+		display: none;
+	}
 	.comments-box {
 		background-color: $green-background-color;
 		height: 178px;
@@ -107,12 +71,6 @@ header {
 	}
 }
 
-@media only screen and (max-width: 1024px) {
-	.comments-container {
-		display: none;
-	}
-}
-
 .apply-button {
 	background-color: #8AB679;
 	width: 15%;
@@ -123,13 +81,10 @@ header {
 	font-size: 1.4rem;
 	font-weight: $font-weight-bold;
 	cursor: pointer;
-}
-
-@media only screen and (max-width: 1023px) {
-	.apply-button {
+	@media only screen and (max-width: 1023px) {
 		width: 135px;
     	height: 55px;
-	}
+    }
 }
 
 .free-advise {
@@ -143,11 +98,11 @@ header {
 		font-weight: $font-weight-bold;
 		text-align: center;
 		padding: 39px 0 24px 0;
-		@media only screen and (max-width: 1023px) {
-	    	padding: 24px 0;
-	    }
     	margin: 0;
     	float: left;
+    	@media only screen and (max-width: 1023px) {
+	    	padding: 24px 0;
+	    }
 	}
 
 	button {
