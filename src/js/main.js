@@ -1,7 +1,7 @@
 ;
 import {comments} from './comments.js';
 
-let landingPageModule = (function() {
+const landingPageModule = (function() {
 	const commentersInfo = document.getElementById('selected-commenters-info'),
 		  //CLASS NAME GIVEN TO INITIAL LIST ITEM FOR CAROUSEL
 		  listItems = document.getElementsByClassName('slide-show-initial'),
@@ -10,8 +10,7 @@ let landingPageModule = (function() {
 
 	//COUNTER INDEX FOR KEEPING TRACK OF NEXT ELEMENT TO DISPLAY IN A CAROUSEL
 	//PREVIOUS COUNTER TO KEEP TRACK OF LAST ELEMENT TO REMOVE STYLE IN A CAROUSEL
-	let previousIndex, 
-		indexCounter = 0;
+	let previousIndex, indexCounter = 0;
 
 	let __convertTimeStamp = timestamp =>{
 	  let a = new Date(timestamp);

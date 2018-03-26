@@ -29,11 +29,12 @@
     "babel-loader": "^7.1.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
     "grunt-contrib-watch": "^1.0.0",
     "html-webpack-plugin": "^3.0.6",
     "remove-and-do": "^1.0.0",
     "standard": "^10.0.2",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.11.0"
   }
 }

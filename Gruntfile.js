@@ -22,8 +22,12 @@ module.exports = function(grunt) {
   },
   uglify: {
     my_target: {
+      options: {
+        sourceMap: true,
+        sourceMapName: 'src/js/main.map'
+      },
       files: {
-        'build/js/main.min.js': ['src/js/main.js']
+        'src/js/main.min.js': ['src/js/main.js']
       }
     }
   },
@@ -33,7 +37,7 @@ module.exports = function(grunt) {
       tasks: ['sass', 'cssmin']
     },
     js: {
-      files: 'src/js/main.js',
+      files: 'build/js/main.min.js',
       tasks: ['uglify']
     }
   }

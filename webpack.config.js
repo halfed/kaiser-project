@@ -1,15 +1,16 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-  template: __dirname + '/index.html',
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+  template: __dirname + '/src/index.html',
   filename: 'index.html',
-  inject: 'body'
+  inject: false
 });
 
 const path = require("path");
 
 module.exports = {
   entry: {
-      app: __dirname + '/src/js/main.min.js'
+      app: __dirname + '/src/js/main.js'
     },
   module: {
     loaders: [
@@ -24,5 +25,6 @@ module.exports = {
     filename: "js/main.min.js",
     path: __dirname + '/build/'
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HTMLWebpackPluginConfig, new UglifyJSPlugin(
+                                         sourceMap: true)]
 };
