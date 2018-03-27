@@ -10,9 +10,12 @@
 html, body {
 	font-family: $font-family;
 	font-size: 62.5%;
-	display: flex;
 	color: $primary-font-color;
 	margin: 0;
+}
+
+.display-flex {
+	display: flex;
 }
 
 section {

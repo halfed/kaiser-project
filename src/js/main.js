@@ -86,6 +86,7 @@ const landingPageModule = (function() {
 	//FUNCTION TO TOGGLE DISPLAYING AND HIDING MOBILE NAVIGATION
 	let toggleMobileMenuDisplay = () => {
 		wrapper[0].classList.toggle('mobile-content-width');
+		body[0].classList.toggle('display-flex');
 		mobileNavContainer[0].classList.toggle('mobile-nav-active');
 	}
 

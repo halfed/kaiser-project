@@ -25,6 +25,5 @@ module.exports = {
     filename: "js/main.min.js",
     path: __dirname + '/build/'
   },
-  plugins: [HTMLWebpackPluginConfig, new UglifyJSPlugin(
-                                         sourceMap: true)]
+  plugins: [HTMLWebpackPluginConfig, new UglifyJSPlugin()]
 };
