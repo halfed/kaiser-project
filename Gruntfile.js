@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/stylesheets',
         src: ['main.css', '!*.min.css'],
-        dest: 'build/css/',
+        dest: 'src/stylesheets/',
         ext: '.min.css'
       }]
     }
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       tasks: ['sass', 'cssmin']
     },
     js: {
-      files: 'build/js/main.min.js',
+      files: 'src/js/main.js',
       tasks: ['uglify']
     }
   }

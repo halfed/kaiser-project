@@ -5,7 +5,8 @@ const landingPageModule = (function() {
 	const commentersInfo = document.getElementById('selected-commenters-info'),
 		  //CLASS NAME GIVEN TO INITIAL LIST ITEM FOR CAROUSEL
 		  listItems = document.getElementsByClassName('slide-show-initial'),
-		  mainContent = document.getElementsByClassName('main-content'),
+		  body = document.getElementsByTagName('body'),
+		  wrapper = document.getElementsByClassName('wrapper'),
 		  mobileNavContainer = document.getElementsByClassName('mobile-nav');
 
 	//COUNTER INDEX FOR KEEPING TRACK OF NEXT ELEMENT TO DISPLAY IN A CAROUSEL
@@ -84,7 +85,7 @@ const landingPageModule = (function() {
 
 	//FUNCTION TO TOGGLE DISPLAYING AND HIDING MOBILE NAVIGATION
 	let toggleMobileMenuDisplay = () => {
-		mainContent[0].classList.toggle('main-content-width');
+		wrapper[0].classList.toggle('mobile-content-width');
 		mobileNavContainer[0].classList.toggle('mobile-nav-active');
 	}
 

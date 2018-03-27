@@ -10,123 +10,121 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
+    <nav class="mobile-nav" role="navigation" aria-label="mobile navigation">
+        <ul class="list-unstyled components">
+            <li><i class="mobile-icon fas fa-home"></i> <a href="#">Home</a></li>
+            <li><i class="mobile-icon fas fa-globe"></i> <a href="#">Live Happy</a></li>
+            <li><i class="mobile-icon fas fa-heart"></i> <a href="#">Live Healthy</a></li>
+            <li><i class="mobile-icon fas fa-comments"></i> <a href="#">Comments</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
-        <nav class="mobile-nav" role="navigation" aria-label="mobile navigation">
-            <ul class="list-unstyled components">
-                <li><i class="mobile-icon fas fa-home"></i> <a href="#">Home</a></li>
-                <li><i class="mobile-icon fas fa-globe"></i> <a href="#">Live Happy</a></li>
+        <header>
+            <div id="mobile-menu-icon" class="mobile-menu-icon" role="button" aria-label="mobile navigation link"><i class="fas fa-bars"></i></div>
+            <button class="apply-button" role="button" aria-label="Apply Now">Apply Now</buttonrole="button">
+        </header>
 
-                <li><i class="mobile-icon fas fa-heart"></i> <a href="#">Live Healthy</a></li>
-                <li><i class="mobile-icon fas fa-comments"></i> <a href="#">Comments</a></li>
+        <nav class="dt-nav-container" role="navigation" aria-label="desktop navigation">
+            <ul class="dt-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Live Happy</a></li>
+                <li><a href="#">Live Healthy</a></li>
             </ul>
         </nav>
-        <div class="main-content">
-	  	<header>
-            <div id="mobile-menu-icon" class="mobile-menu-icon" role="button" aria-label="mobile navigation link"><i class="fas fa-bars"></i></div>
-	  		<button class="apply-button" role="button" aria-label="Apply Now">Apply Now</buttonrole="button">
-	  	</header>
 
-	  	<nav class="main-nav-container" role="navigation" aria-label="desktop navigation">
-	  		<ul class="main-nav">
-	    		<li><a href="#">Home</a></li>
-	    		<li><a href="#">Live Happy</a></li>
-	    		<li><a href="#">Live Healthy</a></li>
-	    	</ul>
-	  	</nav>
-
-  	<i class="fas fa-bars"></i>
-    <div class="carousel">
-    	<ul>
-    		<li class="image-slide-show-initial slide-show-active">
-                <img src="assets/images/cat.jpg" class="active" alt="Waiting for the right moment">
-                <div class="image-description">
-                    <p class="description-header">Waiting for the right moment?</p>
-                    <p class="description-content">Sometimes the right time to start is now.</p>
-                    <button>Special Delivery</button>
-                </div>
-            </li>
-    		<li class="image-slide-show-initial">
-    			<img src="assets/images/ducks.jpg" alt="Building Better Leaders">
-    			<div class="image-description">
-    				<p class="description-header">Building Better Leaders</p>
-    				<p class="description-content">Without ducking out of the holiday party too quick.</p>
-    				<button>Free Advise</button>
-    			</div>
-    		</li>
-    	</ul>
-        <div id="previous-image-button" class="previous-button-light">
-            <i class="fas fa-angle-left"></i>
-        </div>
-        <div id="next-image-button" class="next-button-light">
-            <i class="fas fa-angle-right"></i>
-        </div>
-    </div>
-
-    <div class="main" role="main">
-    	<div class="content-container">
-    		<p class="content-header">
-	    		Welcome to Development<br/><span class="content-light-border-bottom">Please be thorough when coding...<span>
-	    	</p>
-	    	<p class="content">
-	    		Building websites is a great time to reflect on the cool things we can do with code. We get to add alt tags, code links and get to stand by the latest in HTML or pre-processors like sass or less. If you like webpack you'll love the project we have set up for you. Good luck and have some fun!
-	    	</p>
-
-	    	<div class="link-container">
-	    		<ul>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    	</ul>
-		    	<ul>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    		<li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
-		    	</ul>
-	    	</div>
-    	</div>
-    	
-	    <div id="comments-container" class="comments-container">
-	    	<ul id="comments-box" class="comments-box">
-
-	    	</ul>
-	    	<div id="carousel-buttons" class="carousel-buttons">
-		    	<div id="previous-button" class="previous-button">
-			    	<i class="fas fa-angle-left"></i>
-			    </div>
-			    <div id="next-button" class="next-button">
-			    	<i class="fas fa-angle-right"></i>
-			    </div>
-		    </div>
-		    <div id="selected-commenters-info" class="selected-commenters-info">
-		    </div>
-            <div class="comment-icon">
-                <i class="fas fa-quote-right"></i>
+        <section class="carousel">
+            <ul>
+                <li class="image-slide-show-initial slide-show-active">
+                    <img src="assets/images/cat.jpg" class="active" alt="Waiting for the right moment">
+                    <div class="image-description">
+                        <p class="description-header">Waiting for the right moment?</p>
+                        <p class="description-content">Sometimes the right time to start is now.</p>
+                        <button>Special Delivery</button>
+                    </div>
+                </li>
+                <li class="image-slide-show-initial">
+                    <img src="assets/images/ducks.jpg" alt="Building Better Leaders">
+                    <div class="image-description">
+                        <p class="description-header">Building Better Leaders</p>
+                        <p class="description-content">Without ducking out of the holiday party too quick.</p>
+                        <button>Free Advise</button>
+                    </div>
+                </li>
+            </ul>
+            <div id="previous-image-button" class="previous-button-light">
+                <i class="fas fa-angle-left"></i>
             </div>
-	    </div>
-	</div>
-    <div class="free-advise">
-    	<p>Let's put an end to world hunger today</p>
-    	<button>Free Advise</button>
-    </div>
-    <div class="box-model">
-    	<p>Changing the world one pixel at a time.</p>
-    	<button>Box Model</button>
-    </div>
+            <div id="next-image-button" class="next-button-light">
+                <i class="fas fa-angle-right"></i>
+            </div>
+        </section>
 
-    <footer>
-    	<p role="contentinfo">COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
-    	<div class="footer-links">
-    		<a href="#">Link1</a>
-    		<a href="#">Link2</a>
-    		<a href="#">Link3</a>
-    		<a href="#">Link4</a>
-    	</div>
-    </footer>
-</div>
+        <section class="main" role="main">
+            <div class="content-container">
+               <p class="content-header">
+                Welcome to Development<br/><span class="content-light-border-bottom">Please be thorough when coding...<span>
+               </p>
+               <p class="content">
+                Building websites is a great time to reflect on the cool things we can do with code. We get to add alt tags, code links and get to stand by the latest in HTML or pre-processors like sass or less. If you like webpack you'll love the project we have set up for you. Good luck and have some fun!
+               </p>
+
+                <div class="link-container">
+                   <ul>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                   </ul>
+                   <ul>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                        <li><i class="fas fa-check"></i><a href="#">Some Link</a></li>
+                   </ul>
+                </div>
+            </div>
+    
+            <div id="comments-container" class="comments-container">
+                <ul id="comments-box" class="comments-box">
+                </ul>
+                <div id="carousel-buttons" class="carousel-buttons">
+                    <div id="previous-button" class="previous-button">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div id="next-button" class="next-button">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+                <div id="selected-commenters-info" class="selected-commenters-info">
+                </div>
+                <div class="comment-icon">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="free-advise">
+            <p>Let's put an end to world hunger today</p>
+            <button>Free Advise</button>
+        </section>
+
+        <section class="box-model">
+            <p>Changing the world one pixel at a time.</p>
+            <button>Box Model</button>
+        </section>
+
+        <footer>
+            <p role="contentinfo">COPYRIGHT &copy; 2017. BUILT BY A CONFIDENT DEVELOPER</p>
+            <div class="footer-links">
+                <a href="#">Link1</a>
+                <a href="#">Link2</a>
+                <a href="#">Link3</a>
+                <a href="#">Link4</a>
+            </div>
+        </footer>
+
     </div>
     <script type="module" src="js/main.min.js"></script></script>
   </body>

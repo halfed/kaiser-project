@@ -1,9 +1,12 @@
-.main-nav-container {
+.dt-nav-container {
 	height: 39px;
 	margin: 27px 0 24px 0;
+	@media only screen and (max-width: 1023px) {
+		display: none;
+	}
 }
 
-.main-nav {
+.dt-nav {
 	display: flex;
 	float: right;
 	li {
